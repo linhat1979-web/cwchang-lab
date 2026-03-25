@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張教授物理化學實驗室 | CW Chang Research Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold">C</div>
+                <span class="text-xl font-bold tracking-tight text-slate-900">CW Chang Lab</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#home" class="hover:text-blue-700">首頁</a>
+                <a href="#news" class="hover:text-blue-700">最新消息</a>
+                <a href="#research" class="hover:text-blue-700">研究簡介</a>
+                <a href="#equipment" class="hover:text-blue-700">儀器設備</a>
+                <a href="#publications" class="hover:text-blue-700">發表期刊</a>
+                <a href="#members" class="hover:text-blue-700">成員介紹</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-gradient text-white py-24 px-6 text-center relative overflow-hidden">
+        <div class="container mx-auto relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">張教授物理化學實驗室</h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto font-light">
+                專注於碳量子點 (CDs) 合成、純化與螢光機制研究
+            </p>
+            <div class="flex justify-center space-x-4">
+                <span class="bg-white/20 px-4 py-1 rounded-full text-sm">#CarbonQuantumDots</span>
+                <span class="bg-white/20 px-4 py-1 rounded-full text-sm">#ZIF-8</span>
+                <span class="bg-white/20 px-4 py-1 rounded-full text-sm">#PhysicalChemistry</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 space-y-24">
+
+        <section id="news">
+            <div class="flex items-center mb-8">
+                <h2 class="text-3xl font-bold border-l-8 border-blue-700 pl-4">最新消息 <span class="text-slate-400 text-lg font-normal ml-2">News</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <span class="text-blue-700 font-bold text-sm">2026.03</span>
+                    <p class="mt-2 text-slate-700">實驗室 Web 版藥品管理系統正式導入日常營運。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <span class="text-blue-700 font-bold text-sm">2026.02</span>
+                    <p class="mt-2 text-slate-700">完成日本學術考察（青森、仙台、大阪），收穫豐碩。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <span class="text-blue-700 font-bold text-sm">2026.01</span>
+                    <p class="mt-2 text-slate-700">賀！關於 CDs 螢光淬滅機制的論文正式獲 <b>JPCC</b> 接受。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <span class="text-blue-700 font-bold text-sm">2025.12</span>
+                    <p class="mt-2 text-slate-700">參與夏威夷國際學術會議，發表碳量子點純化技術。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="bg-blue-900 text-white rounded-3xl p-12 shadow-2xl">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">研究簡介 <span class="text-blue-300 font-normal">Research Overview</span></h2>
+                <p class="text-lg leading-relaxed text-blue-50 mb-8 text-left">
+                    本實驗室致力於探索奈米材料的物理化學奧秘，核心技術聚焦於<b>碳量子點 (Carbon Quantum Dots, CDs)</b> 的可控合成與精確純化。我們利用 <b>ZIF-8 (MOF)</b> 材料進行 CDs 的選擇性吸附純化研究，並深入探討結構異質性對<b>螢光淬滅機制 (Fluorescence Quenching)</b> 的關鍵影響，為光物理性質的解讀提供嶄新視角。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-atom text-3xl mb-3 text-blue-300"></i>
+                        <h3 class="font-bold">CDs 合成</h3>
+                    </div>
+                    <div class="p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-vial text-3xl mb-3 text-blue-300"></i>
+                        <h3 class="font-bold">ZIF-8 純化</h3>
+                    </div>
+                    <div class="p-4 bg-white/10 rounded-lg">
+                        <i class="fas fa-wave-square text-3xl mb-3 text-blue-300"></i>
+                        <h3 class="font-bold">螢光機制</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipment">
+            <h2 class="text-3xl font-bold mb-10 text-center">儀器設備 <span class="text-slate-400 font-normal">Equipment</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 italic">UV-Vis Photo</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">紫外-可見分光光度計</h3>
+                        <p class="text-slate-600 text-sm italic">UV-Vis Spectrophotometer</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 italic">Fluorescence Photo</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">螢光分光光度計</h3>
+                        <p class="text-slate-600 text-sm italic">Fluorescence Spectrometer</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 card-hover">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 italic">Synthesis Photo</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">高壓溶劑熱反應釜</h3>
+                        <p class="text-slate-600 text-sm italic">High-Pressure Autoclave</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2 class="text-3xl font-bold mb-8">發表期刊 <span class="text-slate-400 font-normal">Selected Publications</span></h2>
+            <div class="space-y-6">
+                <div class="bg-white p-8 rounded-2xl border-l-8 border-blue-900 shadow-sm">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">JPCC 2026</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2">The Impact of Structural Heterogeneity on the Interpretation of Fluorescence Quenching Mechanisms in Carbon Dots and Carbon Dots@MOF Composites</h3>
+                    <p class="text-slate-600 font-medium">C.W. Chang, et al.</p>
+                    <p class="text-slate-500 text-sm mt-4 italic underline italic cursor-pointer hover:text-blue-700">DOI: 10.1021/acs.jpcc.xxxxxxx</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="members" class="pb-24">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-900 underline decoration-blue-700 underline-offset-8">成員介紹</h2>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="text-center bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-6 flex items-center justify-center italic text-slate-400">Photo</div>
+                    <h3 class="text-2xl font-bold text-slate-900">張教授 (PI)</h3>
+                    <p class="text-blue-700 mb-4">CW Chang</p>
+                    <p class="text-slate-600 text-sm px-6">致力於物化奈米材料研究，熱愛與學生交流，目前亦負責管理實驗室數位化轉型。</p>
+                    <p class="mt-6 text-slate-500 text-xs font-mono">📧 cwchang@cc.ncue.edu.tw</p>
+                </div>
+                <div class="flex flex-col justify-center bg-slate-100 p-10 rounded-3xl border-2 border-dashed border-slate-300">
+                    <h3 class="text-xl font-bold text-slate-700 mb-4">加入我們</h3>
+                    <p class="text-slate-500 mb-6 italic">我們正在誠徵對碳量子點、螢光機制感興趣的專題生與研究生！</p>
+                    <button class="bg-blue-900 text-white px-6 py-2 rounded-lg text-sm hover:bg-blue-800 transition">了解詳情</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">© 2026 CW Chang Research Group @ NCUE Chemistry</p>
+            <p class="text-xs">
+                Content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="underline hover:text-white" target="_blank">CC BY 4.0</a>. 
+                Built with <i class="fas fa-heart text-red-500"></i> by Butler AI.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
