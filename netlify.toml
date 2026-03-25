@@ -1,8 +1,8 @@
 [build]
-  command = "hugo --gc --minify --printPathWarnings"
+  command = "hugo --gc --minify"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.145.0"
+  HUGO_VERSION = "0.123.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"

@@ -1,24 +1,16 @@
 # ==========================================
-# 1. 核心服務設定 (解決新版 Hugo 報錯的關鍵)
-# ==========================================
-services:
-  googleAnalytics:
-    id: "" # 必須存在，否則新版 Hugo 會報錯
-
-# ==========================================
-# 2. 網站基本資訊
+# 1. 核心設定
 # ==========================================
 title: CW Chang Lab
 baseURL: https://cwc-lab.netlify.app/
 copyright: "© {year} CW Chang Lab"
 
-# 啟用最新 Hugo Blox 引擎
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
 # ==========================================
-# 3. 語言與路徑設定 (鎖定單一語言最穩定)
+# 2. 語言與分類
 # ==========================================
 defaultContentLanguage: zh
 hasCJKLanguage: true
@@ -26,10 +18,14 @@ languages:
   zh:
     languageName: 中文
     contentDir: content/zh
-    title: CW Chang Lab
+
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
 
 # ==========================================
-# 4. 導航選單 (連結首頁組件)
+# 3. 導航選單
 # ==========================================
 menu:
   zh:
@@ -47,19 +43,12 @@ menu:
       weight: 40
 
 # ==========================================
-# 5. 網站參數與安全設定
+# 4. 參數與安全 (徹底避開 Analytics 報錯)
 # ==========================================
 params:
   appearance:
     theme_day: minimal
     theme_night: minimal
-  marketing:
-    google_analytics: ""
-
-taxonomies:
-  author: authors
-  tag: tags
-  category: categories
 
 security:
   funcs:
