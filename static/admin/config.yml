@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: [您的GitHub帳號]/cwchang-lab # 記得將這裡改為您的實際帳號名稱
+  repo: linhat1979-web/cwchang-lab # 記得將這裡改為您的實際帳號名稱
   branch: main
 
 media_folder: "static/images"
