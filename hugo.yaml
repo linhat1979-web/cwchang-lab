@@ -1,8 +1,7 @@
-# 放置在檔案最上方
 baseURL: https://cwc-lab.netlify.app/
 title: CW Chang Lab
 
-# 解決 WC_POST_CSS 報錯的唯一設定
+# --- 1. 權限解鎖：解決 WC_POST_CSS 報錯 ---
 security:
   funcs:
     getenv:
@@ -10,11 +9,19 @@ security:
       - '^CI$'
       - '^WC_POST_CSS$'
 
+# --- 2. 解決 Google Analytics 報錯 ---
+services:
+  googleAnalytics:
+    id: ""
+
+# --- 3. 核心模組 ---
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
+# --- 4. 語言設定 ---
 defaultContentLanguage: zh
+hasCJKLanguage: true
 languages:
   zh:
     languageName: 中文
