@@ -1,14 +1,37 @@
 baseURL: https://cwc-lab.netlify.app/
 title: CW Chang Lab
 
+# 語言設定
 defaultContentLanguage: zh
 hasCJKLanguage: true
-
 languages:
   zh:
     languageName: 中文
     contentDir: content/zh
 
+# 模組引入
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+
+# 分類法
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
+
+# ==========================================
+# 關鍵：解決 WC_POST_CSS 權限報錯
+# ==========================================
+security:
+  funcs:
+    getenv:
+      - '^HUGO_'
+      - '^CI$'
+      - '^WC_POST_CSS$'
+
+# 基礎參數
+params:
+  appearance:
+    theme_day: minimal
+    theme_night: minimal
