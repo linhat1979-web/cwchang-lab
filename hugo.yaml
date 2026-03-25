@@ -1,25 +1,23 @@
 # ==========================================
-# 1. 核心服務設定 (解決 Google Analytics 報錯關鍵)
+# 核心服務設定
 # ==========================================
 services:
   googleAnalytics:
     id: ""
 
 # ==========================================
-# 2. 網站基本資訊
+# 網站基本資訊
 # ==========================================
 title: CW Chang Lab
 baseURL: https://cwc-lab.netlify.app/
 copyright: "© {year} CW Chang Lab"
 
-# 啟用 Hugo Blox 引擎
+# 啟動 Hugo Blox 引擎
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
-# ==========================================
-# 3. 多語言設定
-# ==========================================
+# 語言設定
 defaultContentLanguage: zh
 hasCJKLanguage: true
 
@@ -27,15 +25,11 @@ languages:
   zh:
     languageName: 中文
     contentDir: content/zh
-    title: CW Chang Lab
   en:
     languageName: English
     contentDir: content/en
-    title: CW Chang Lab
 
-# ==========================================
-# 4. 導航欄設定 (連結到您 landing 頁面的各個區塊)
-# ==========================================
+# 導航選單 (連結到首頁區塊)
 menu:
   zh:
     - name: 最新消息
@@ -50,57 +44,19 @@ menu:
     - name: 儀器介紹
       url: '#equipments'
       weight: 40
-  en:
-    - name: News
-      url: '#news'
-      weight: 10
-    - name: Members
-      url: '#people'
-      weight: 20
-    - name: Publications
-      url: '#publications'
-      weight: 30
-    - name: Equipment
-      url: '#equipments'
-      weight: 40
 
 # ==========================================
-# 5. 網站參數設定 (外觀與功能)
+# 關鍵！解決 Author 報錯的分類設定
 # ==========================================
-params:
-  appearance:
-    theme_day: minimal
-    theme_night: minimal
-    font: minimal
-  
-  # 行銷與 SEO
-  marketing:
-    google_analytics: ""
-  
-  description: "CW Chang Lab - 物理化學與碳量子點研究實驗室"
-  
-  # 分享與社交圖示 (選填)
-  site_type: Organization
-  org_name: "CW Chang Lab"
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
 
-# ==========================================
-# 6. 安全與編譯設定 (Netlify 部署必要)
-# ==========================================
+# 安全編譯設定
 security:
   funcs:
     getenv:
       - '^HUGO_'
       - '^CI$'
       - '^WC_POST_CSS$'
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true # 允許在 Markdown 中使用 HTML
-
-# 分類法設定
-taxonomies:
-  tag: tags
-  category: categories
-  publication_type: publication_types
-  author: authors
