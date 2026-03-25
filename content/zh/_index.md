@@ -11,7 +11,13 @@ sections:
     design:
       background:
         color: '#f8f9fa'
-
+# 0. 測試用文字區塊 (測試完可刪除)
+  - block: markdown
+    content:
+      title: 系統狀態檢查
+      text: "如果您能看到這行字，代表首頁引擎已成功啟動！"
+    design:
+      columns: '1'
   # 2. 最新動態 (News)
   - block: collection
     id: news
