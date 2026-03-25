@@ -113,3 +113,12 @@ taxonomies:
   category: categories
   publication_type: publication_types
   author: authors
+  # 在檔案頂部或適當位置加入
+services:
+  googleAnalytics:
+    id: ''  # 如果你有 GA4 ID (如 G-XXXXX)，請填入這裡
+
+# 確保 params 區塊也有對應的預期欄位（有些版本會讀這裡）
+params:
+  marketing:
+    google_analytics: ''
