@@ -1,5 +1,37 @@
-baseURL: https://cwc-lab.netlify.app/
 title: CW Chang Lab
+baseURL: https://cwc-lab.netlify.app/
 
-# 暫時拔除語言路徑，強制讀取 content/ 下的所有檔案
-# 不要寫 contentDir: content/zh
+# 1. 核心模組
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+
+# 2. 解決 404 的關鍵：單一語言且不使用子目錄
+defaultContentLanguage: zh
+hasCJKLanguage: true
+disableLanguages: ["en"] # 強制關閉英文，確保只生出一個首頁
+
+# 3. 解決 WC_POST_CSS 權限報錯 (這是您剛才 Log 裡的元兇)
+security:
+  funcs:
+    getenv:
+      - '^HUGO_'
+      - '^CI$'
+      - '^WC_POST_CSS$'
+
+# 4. 解決 Google Analytics 報錯
+services:
+  googleAnalytics:
+    id: ""
+
+# 5. 分類設定
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
+
+# 6. 外觀設定
+params:
+  appearance:
+    theme_day: minimal
+    theme_night: minimal
