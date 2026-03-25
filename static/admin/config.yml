@@ -8,7 +8,7 @@ public_folder: "/images"
 
 # 支援中英文雙語內容
 i18n:
-  structure: multiple_folders
+  structure: multiple_files
   locales: [zh, en]
 
 collections:
