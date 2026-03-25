@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: [您的GitHub帳號]/cwchang-lab # 記得將這裡改為您的實際帳號名稱
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+# 支援中英文雙語內容
+i18n:
+  structure: directory
+  locales: [zh, en]
+
+collections:
+  # 1. 最新消息 (News)
+  - name: "news"
+    label: "最新消息"
+    folder: "content/zh/news"
+    create: true
+    fields:
+      - {label: "日期", name: "date", widget: "datetime"}
+      - {label: "標題", name: "title", widget: "string"}
+      - {label: "消息內容", name: "body", widget: "markdown"}
+
+  # 2. 實驗室成員 (Members)
+  - name: "members"
+    label: "實驗室成員"
+    folder: "content/zh/members"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "姓名", name: "title", widget: "string"}
+      - {label: "職稱", name: "role", widget: "select", options: ["主持人 PI", "博士後研究", "碩士班學生", "大學部專題生", "已畢業成員"]}
+      - {label: "個人照片", name: "image", widget: "image", required: false}
+      - {label: "研究方向/簡介", name: "body", widget: "markdown"}
+
+  # 3. 論文清單 (Publications)
+  - name: "publications"
+    label: "論文清單"
+    folder: "content/zh/publications"
+    create: true
+    fields:
+      - {label: "論文標題", name: "title", widget: "string"}
+      - {label: "發表年份", name: "year", widget: "number"}
+      - {label: "期刊名稱", name: "journal", widget: "string"}
+      - {label: "所有作者", name: "authors", widget: "string"}
+      - {label: "DOI 連結", name: "doi", widget: "string", required: false}
+      - {label: "摘要說明", name: "body", widget: "markdown"}
+
+  # 4. 儀器介紹 (Equipment)
+  - name: "equipment"
+    label: "儀器介紹"
+    folder: "content/zh/equipment"
+    create: true
+    fields:
+      - {label: "儀器名稱", name: "title", widget: "string"}
+      - {label: "英文名稱", name: "en_title", widget: "string"}
+      - {label: "儀器照片", name: "image", widget: "image"}
+      - {label: "規格與操作規範", name: "body", widget: "markdown"}
