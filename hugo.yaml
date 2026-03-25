@@ -1,7 +1,7 @@
 baseURL: https://cwc-lab.netlify.app/
 title: CW Chang Lab
 
-# --- 1. 權限解鎖：解決 WC_POST_CSS 報錯 ---
+# --- 1. 權限解鎖 (解決 WC_POST_CSS 報錯的唯一方法) ---
 security:
   funcs:
     getenv:
@@ -9,23 +9,22 @@ security:
       - '^CI$'
       - '^WC_POST_CSS$'
 
-# --- 2. 解決 Google Analytics 報錯 ---
-services:
-  googleAnalytics:
-    id: ""
-
-# --- 3. 核心模組 ---
+# --- 2. 核心引擎與語言設定 ---
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
-# --- 4. 語言設定 ---
 defaultContentLanguage: zh
 hasCJKLanguage: true
 languages:
   zh:
     languageName: 中文
     contentDir: content/zh
+
+# --- 3. 解決 Google Analytics 報錯 ---
+services:
+  googleAnalytics:
+    id: ""
 
 taxonomies:
   author: authors
