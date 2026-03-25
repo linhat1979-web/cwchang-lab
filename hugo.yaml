@@ -31,3 +31,10 @@ menu:
     - name: 儀器介紹  # 
       url: '#equipments'
       weight: 40
+# 告訴安全警衛：准許讀取這些環境變數
+security:
+  funcs:
+    getenv:
+      - '^HUGO_'
+      - '^CI$'
+      - '^WC_POST_CSS$'  # 關鍵就在這行！
