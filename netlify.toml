@@ -3,10 +3,4 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.135.0"
-  HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
-
-# 強制告訴 Netlify 你的設定檔在哪
-[context.production]
-  command = "hugo --config hugo.yaml --gc --minify"
+  HUGO_VERSION = "0.119.0"

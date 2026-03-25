@@ -1,57 +1,22 @@
-# ==========================================
-# 核心服務設定
-# ==========================================
-services:
-  googleAnalytics:
-    id: ""
-
-# ==========================================
-# 網站基本資訊
-# ==========================================
 title: CW Chang Lab
 baseURL: https://cwc-lab.netlify.app/
-copyright: "© {year} CW Chang Lab"
 
-# 啟動 Hugo Blox 引擎
+# 啟用 Hugo Blox 引擎
 module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
-# 語言設定
+# 語言設定 (只留中文，避免系統去抓不存在的英文首頁)
 defaultContentLanguage: zh
 hasCJKLanguage: true
-
 languages:
   zh:
     languageName: 中文
     contentDir: content/zh
-  en:
-    languageName: English
-    contentDir: content/en
 
-# 導航選單 (連結到首頁區塊)
-menu:
-  zh:
-    - name: 最新消息
-      url: '#news'
-      weight: 10
-    - name: 實驗室成員
-      url: '#people'
-      weight: 20
-    - name: 論文著作
-      url: '#publications'
-      weight: 30
-    - name: 儀器介紹
-      url: '#equipments'
-      weight: 40
-
-# ==========================================
-# 關鍵！解決 Author 報錯的分類設定
-# ==========================================
+# 讓主持人區塊能運作
 taxonomies:
   author: authors
-  tag: tags
-  category: categories
 
 # 安全編譯設定
 security:
