@@ -1,5 +1,12 @@
 # ==========================================
-# 核心設定 (Core Settings)
+# 1. 核心服務設定 (解決 Google Analytics 報錯關鍵)
+# ==========================================
+services:
+  googleAnalytics:
+    id: ""
+
+# ==========================================
+# 2. 網站基本資訊
 # ==========================================
 title: CW Chang Lab
 baseURL: https://cwc-lab.netlify.app/
@@ -10,9 +17,11 @@ module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
 
-# 語言設定
+# ==========================================
+# 3. 多語言設定
+# ==========================================
 defaultContentLanguage: zh
-hasCJKLanguage: true # 最佳化中文字元計算
+hasCJKLanguage: true
 
 languages:
   zh:
@@ -25,7 +34,7 @@ languages:
     title: CW Chang Lab
 
 # ==========================================
-# 導航欄設定 (Navigation Menus)
+# 4. 導航欄設定 (連結到您 landing 頁面的各個區塊)
 # ==========================================
 menu:
   zh:
@@ -33,7 +42,7 @@ menu:
       url: '#news'
       weight: 10
     - name: 實驗室成員
-      url: '#members'
+      url: '#people'
       weight: 20
     - name: 論文著作
       url: '#publications'
@@ -41,15 +50,12 @@ menu:
     - name: 儀器介紹
       url: '#equipments'
       weight: 40
-    - name: 聯絡我們
-      url: '#contact'
-      weight: 50
   en:
     - name: News
       url: '#news'
       weight: 10
     - name: Members
-      url: '#members'
+      url: '#people'
       weight: 20
     - name: Publications
       url: '#publications'
@@ -57,68 +63,44 @@ menu:
     - name: Equipment
       url: '#equipments'
       weight: 40
-    - name: Contact
+
 # ==========================================
-# 網站參數設定 (Site Parameters)
+# 5. 網站參數設定 (外觀與功能)
 # ==========================================
 params:
-  # 網站外觀與主題
   appearance:
     theme_day: minimal
     theme_night: minimal
     font: minimal
-    font_size: L
-
-  # 網站類型 (用於 Google 搜尋)
+  
+  # 行銷與 SEO
+  marketing:
+    google_analytics: ""
+  
+  description: "CW Chang Lab - 物理化學與碳量子點研究實驗室"
+  
+  # 分享與社交圖示 (選填)
   site_type: Organization
   org_name: "CW Chang Lab"
-  description: "CW Chang Lab - 專注於 X 領域的領先研究實驗室"
-
-  # 聯絡資訊 (會顯示在頁尾或 Contact Blox)
-  email: "your-email@example.com"
-  address:
-    city: "Taipei"
-    country: "Taiwan"
-
-  # 社交媒體連結
-  social:
-    - icon: twitter
-      icon_pack: fab
-      link: 'https://twitter.com/'
-    - icon: github
-      icon_pack: fab
-      link: 'https://github.com/'
 
 # ==========================================
-# 內容渲染設定 (Markdown & Security)
+# 6. 安全與編譯設定 (Netlify 部署必要)
 # ==========================================
-markup:
-  goldmark:
-    renderer:
-      unsafe: true # 允許在 Markdown 中使用 HTML
-  highlight:
-    codeFences: true
-    guessSyntax: true
-
 security:
   funcs:
     getenv:
       - '^HUGO_'
       - '^CI$'
-      - '^WC_POST_CSS$' # 准許讀取環境變數，確保 CSS 編譯正常
+      - '^WC_POST_CSS$'
 
-# 分類法
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # 允許在 Markdown 中使用 HTML
+
+# 分類法設定
 taxonomies:
   tag: tags
   category: categories
   publication_type: publication_types
   author: authors
-  # 在檔案頂部或適當位置加入
-services:
-  googleAnalytics:
-    id: ''  # 如果你有 GA4 ID (如 G-XXXXX)，請填入這裡
-
-# 確保 params 區塊也有對應的預期欄位（有些版本會讀這裡）
-params:
-  marketing:
-    google_analytics: ''
