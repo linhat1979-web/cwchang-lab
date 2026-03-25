@@ -1,26 +1,24 @@
+# 放置在檔案最上方
 baseURL: https://cwc-lab.netlify.app/
 title: CW Chang Lab
 
-# 引擎模組
-module:
-  imports:
-    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
-
-# 語言路徑鎖定 (確保 Hugo 去 content/zh/ 找東西)
-defaultContentLanguage: zh
-hasCJKLanguage: true
-languages:
-  zh:
-    languageName: 中文
-    contentDir: content/zh
-
-# 解決權限報錯 (這是之前沒字的原因之一)
+# 解決 WC_POST_CSS 報錯的唯一設定
 security:
   funcs:
     getenv:
       - '^HUGO_'
       - '^CI$'
       - '^WC_POST_CSS$'
+
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+
+defaultContentLanguage: zh
+languages:
+  zh:
+    languageName: 中文
+    contentDir: content/zh
 
 taxonomies:
   author: authors
