@@ -1,70 +1,13 @@
 ---
-# 官網大門總控設定
-title: C.W. Chang Lab 物理化學實驗室
-type: blox # 改用 blox 模式最穩定
+# content/zh/_index.md
+title: C.W. Chang Lab 測試中
+type: blox
 
 sections:
-  # 1. 主持人介紹 (About Me)
-  - block: about.biography
-    content:
-      user: admin # 絕對不能改，對應下方 authors/admin
-    design:
-      background:
-        color: '#f8f9fa'
-# 0. 測試用文字區塊 (測試完可刪除)
   - block: markdown
     content:
-      title: 系統狀態檢查
-      text: "如果您能看到這行字，代表首頁引擎已成功啟動！"
+      title: "第一階段測試：靜態文字"
+      text: "如果教授看到這行字，代表 _index.md 檔案路徑與 type: blox 引擎完全正常。"
     design:
       columns: '1'
-  # 2. 最新動態 (News)
-  - block: collection
-    id: news
-    content:
-      title: 最新動態
-      subtitle: 實驗室的科研進度與消息
-      filters:
-        folders:
-          - news
-    design:
-      columns: '2'
-      view: compact
-
-  # 3. 論文著作 (Publications)
-  - block: collection
-    id: publications
-    content:
-      title: 論文清單
-      filters:
-        folders:
-          - publications
-    design:
-      columns: '1'
-      view: citation
-
-  # 4. 研究團隊 (Members)
-  - block: people
-    id: people
-    content:
-      title: 研究團隊
-      user_groups:
-        - Principal Investigators
-        - Students
-    design:
-      show_interests: true
-
-  # 5. 儀器介紹 (Equipments)
-  - block: collection
-    id: equipments
-    content:
-      title: 儀器設備
-      filters:
-        folders:
-          - equipments
-    design:
-      columns: '2'
-      view: card
 ---
-
-歡迎來到張智煒博士的物理化學實驗室網站。我們致力於**碳量子點 (Carbon Quantum Dots)** 與**納米材料**的前沿研究。
