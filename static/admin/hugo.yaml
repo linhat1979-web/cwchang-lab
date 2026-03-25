@@ -1,0 +1,33 @@
+title: CW Chang Lab
+baseURL: https://cwc-lab.netlify.app/
+
+# 啟用 Hugo Blox 引擎
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+
+# 語言設定
+defaultContentLanguage: zh
+languages:
+  zh:
+    languageName: 中文
+    contentDir: content/zh
+  en:
+    languageName: English
+    contentDir: content/en
+
+# 導航欄設定
+menu:
+  zh:
+    - name: 最新消息
+      url: '#news'
+      weight: 10
+    - name: 實驗室成員
+      url: '#people'
+      weight: 20
+    - name: 論文著作
+      url: '#publications'
+      weight: 30
+    - name: 儀器介紹  # 
+      url: '#equipment'
+      weight: 40
